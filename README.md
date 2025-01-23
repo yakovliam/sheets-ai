@@ -49,6 +49,14 @@ export default tseslint.config({
 });
 ```
 
+## Install
+
+```bash
+bun install
+```
+
+That's it, nothing more.
+
 ## Included Scripts
 
 ```json
