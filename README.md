@@ -1,11 +1,35 @@
-# React + TypeScript + Vite
+# react-ts-expanded-template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a setup to get React working in Vite with HMR, some ESLint rules, and more:
 
-Currently, two official plugins are available:
+- Tailwind
+- Bun
+- Shadcn
+- React Router
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Install
+
+```bash
+bun install
+```
+
+## Included Scripts
+
+```json
+  "scripts": {
+    "dev": "bunx --bun vite",
+    "build": "bunx --bun vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "preview": "bunx --bun vite preview"
+  },
+```
+
+- `dev` - Starts the development server
+- `build` - Bundles the app into static files for production
+- `lint` - Runs ESLint
+- `lint:fix` - Runs ESLint and fixes issues
+- `preview` - Preview the production build
 
 ## Expanding the ESLint configuration
 
@@ -48,29 +72,3 @@ export default tseslint.config({
   },
 });
 ```
-
-## Install
-
-```bash
-bun install
-```
-
-That's it, nothing more.
-
-## Included Scripts
-
-```json
-  "scripts": {
-    "dev": "bunx --bun vite",
-    "build": "bunx --bun vite build",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "preview": "bunx --bun vite preview"
-  },
-```
-
-- `dev` - Starts the development server
-- `build` - Bundles the app into static files for production
-- `lint` - Runs ESLint
-- `lint:fix` - Runs ESLint and fixes issues
-- `preview` - Preview the production build
