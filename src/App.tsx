@@ -3,6 +3,7 @@ import Layout from "./components/layout/Layout";
 import IndexPage from "./pages/index/IndexPage";
 import CompanyPage from "./pages/company/CompanyPage";
 import AccountPage from "./pages/account/AccountPage";
+import FourOhFourPage from "./pages/404";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<IndexPage />} />
             <Route path="/account" element={<AccountPage />} />
             <Route path="/company" element={<CompanyPage />} />
+            <Route path="*" element={<FourOhFourPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
