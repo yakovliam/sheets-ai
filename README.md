@@ -1,8 +1,8 @@
-# react-ts-expanded-template
+# react-ts-template
 
 This template provides a setup to get React working in Vite with HMR, some ESLint rules, and more:
 
-- Tailwind
+- Tailwind v4
 - Bun
 - Shadcn
 - React Router
