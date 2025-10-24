@@ -14,12 +14,13 @@ import { greenTheme } from "@univerjs/presets";
 import { WORKBOOK_DATA } from "./data";
 
 import { GoogleGenAI } from "@google/genai";
+import ExcelButtonPlugin from "@/plugins/excel-button-plugin/excel-button-plugin";
 
 const IndexPage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const { univerAPI } = createUniver({
+    const { univerAPI, univer } = createUniver({
       theme: greenTheme,
       locale: LocaleType.EN_US,
       locales: {
@@ -38,10 +39,12 @@ const IndexPage = () => {
       ],
     });
 
+    univer.registerPlugin(ExcelButtonPlugin);
+
     univerAPI.createWorkbook(WORKBOOK_DATA);
 
     univerAPI.addEvent(univerAPI.Event.CellPointerDown, async (params) => {
-      const { worksheet, workbook, row, column } = params;
+      const { worksheet, row, column } = params;
       const clickedCell = worksheet.getRange(row, column).getCell();
 
       if (!(clickedCell.actualRow == 0 && clickedCell.actualColumn == 1)) {
