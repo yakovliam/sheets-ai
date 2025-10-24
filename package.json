@@ -12,9 +12,13 @@
     "preview": "bunx --bun vite preview"
   },
   "dependencies": {
+    "@google/genai": "^1.26.0",
     "@radix-ui/react-icons": "^1.3.2",
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.11",
+    "@univerjs/preset-docs-core": "^0.10.12",
+    "@univerjs/preset-sheets-table": "^0.10.12",
+    "@univerjs/presets": "^0.10.12",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.503.0",
